@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RICARDO RUBERT — Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div id="loader-text">
+      <span class="loader-line" id="loader-status">INITIALIZING SYSTEM...</span>
+      <span class="loader-line" id="loader-bar-wrap">[<span id="loader-bar"></span><span id="loader-cursor">_</span>]</span>
+      <span class="loader-line" id="loader-pct">0%</span>
+    </div>
+  </div>
+
+  <!-- ENTER GATE — shown after loader, requires one click to start music -->
+  <div id="enter-gate" class="hidden">
+    <button id="enter-btn">
+      <span id="enter-icon">&#9654;</span>
+      <span id="enter-text">ENTER</span>
+    </button>
+    <p id="enter-sub">CLICK TO BEGIN</p>
+  </div>
+
+  <!-- THREE.JS CANVAS -->
+  <canvas id="three-canvas"></canvas>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="custom-cursor"></div>
+  <div id="custom-cursor-ring"></div>
+
+  <!-- POST-PROCESSING OVERLAYS -->
+  <div id="vignette"></div>
+  <canvas id="grain-canvas"></canvas>
+
+  <!-- HOVER LABEL -->
+  <div id="screen-label"></div>
+
+  <!-- BACK BUTTON -->
+  <button id="back-btn" class="hidden">&#8592; BACK</button>
+
+
+  <!-- MUTE BUTTON — always visible bottom right -->
+  <button id="mute-btn" title="Mute music">&#128266;</button>
+
+
+  <!-- HERO OVERLAY -->
+  <div id="hero-overlay" class="hidden">
+    <div id="hero-inner">
+      <div id="hero-tag">AI &amp; COMPETITIVE PROGRAMMER</div>
+      <h1 id="hero-name">RICARDO RUBERT</h1>
+      <p id="hero-tagline">I build models that compete.</p>
+      <div id="hero-hint">
+        <span class="blink">▶</span>&nbsp; CLICK A SCREEN TO EXPLORE
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMINAL OVERLAY -->
+  <div id="terminal-overlay" class="hidden">
+    <div id="terminal-window">
+      <div id="terminal-header">
+        <div id="terminal-dots">
+          <span class="dot red"></span>
+          <span class="dot amber"></span>
+          <span class="dot green-dot"></span>
+        </div>
+        <span id="terminal-title">PROJECT_NAME.exe</span>
+        <button id="terminal-close">&#10005;</button>
+      </div>
+      <div id="terminal-body"></div>
+      <div id="terminal-nav" class="hidden">
+        <button id="nav-prev">&#9650; PREV</button>
+        <span id="nav-counter">1 / 1</span>
+        <button id="nav-next">&#9660; NEXT</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEO PLAYER MODAL -->
+  <div id="video-modal" class="hidden">
+    <div id="video-modal-inner">
+      <div id="video-header">
+        <span id="video-title"></span>
+        <div id="video-header-btns">
+          <button id="video-fullscreen" title="Fullscreen">&#x26F6;</button>
+          <button id="video-close" title="Close">&#10005;</button>
+        </div>
+      </div>
+      <div id="video-container">
+        <iframe id="video-iframe"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          frameborder="0">
+        </iframe>
+      </div>
+      <div id="video-footer">
+        <span id="video-hint">&#9654; CLICK OUTSIDE TO CLOSE &nbsp;|&nbsp; &#x26F6; FOR FULLSCREEN</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Use importmap to load Three.js modules properly -->
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"
+    }
+  }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="js/data.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
