@@ -62,11 +62,11 @@ const PORTFOLIO_DATA = {
       content: {
         projects: [
           {
-            title: "Mini Project Alpha",
+            title: "FNAN",
             year: "2024",
-            desc: "Short description of what this project does and why it was interesting.",
-            stack: ["Python", "NumPy"],
-            github: "https://github.com/YOURUSERNAME/repo",
+            desc: "This project was a game inspired in Five nights at freddys that contained a few of our friends in it as charachters.",
+            stack: ["Python", "Pygame"],
+            github: "https://github.com/theprojectdoesnotexistsorry",
           },
           {
             title: "Mini Project Beta",
@@ -139,21 +139,18 @@ const PORTFOLIO_DATA = {
         heading: "SYSTEM CAPABILITIES",
         categories: [
           {
-            name: "Machine Learning",
+            name: "Academic Grades",
             skills: [
-              { name: "PyTorch", level: 90 },
-              { name: "Scikit-Learn", level: 85 },
-              { name: "Model Training", level: 88 },
-              { name: "Fine-tuning", level: 75 },
+              { name: "Imperative programing", level:  100},
+              { name: "Fundamental AI", level: 95 },
+              { name: "Intro to Machine Learning", level: 90},
             ],
           },
           {
-            name: "Programming",
+            name: "Extra courses",
             skills: [
-              { name: "Python", level: 95 },
-              { name: "Competitive Algo", level: 80 },
-              { name: "Data Structures", level: 82 },
-              { name: "SQL / Databases", level: 65 },
+              { name: "Intro to Information Systems (SQL)", level: 90 },
+              { name: "Algorithmic Programing Contests", level: 100 },
             ],
           },
           {
@@ -174,18 +171,17 @@ const PORTFOLIO_DATA = {
       glowColor: "#00ff88",
       label: "PROJECT.01",
       content: {
-        title: "Project Alpha",
-        subtitle: "One-line pitch for your project",
+        title: "QueenSpectraHive",
+        subtitle: "Have you ever wondered if there is a queen bee or not in a hive?",
         description:
-          `Describe what the project does, what problem it solves,
-and what you're most proud of technically.`,
-        stack: ["Python", "PyTorch", "CUDA"],
-        github: "https://github.com/YOURUSERNAME/project-alpha",
+          `This project uses data obtained from Kaggle and can predict if a hive has a queen bee or not. It is implemented using Logistic regression as our baseline model, an LSTM and a Transformer.`,
+        stack: ["Pandas", "scikit-learn"],
+        github: "https://github.com/Cistaroth/QueenSpectraHive",
         demo: "",   // live demo URL, or leave ""
-        year: "2024",
+        year: "2026",
         competition: "",   // e.g. "1st Place — Kaggle XYZ", or leave ""
-        image: "assets/images/p1.jpg",
-        youtube: "https://www.youtube.com/watch?v=I_kRcwBWXYs",   // YouTube URL or leave ""
+        image: "assets\images\bee_pic.jpg", //This does not work
+        youtube: "",   // YouTube URL or leave ""
       },
     },
 
@@ -195,13 +191,14 @@ and what you're most proud of technically.`,
       glowColor: "#00ff88",
       label: "PROJECT.02",
       content: {
-        title: "Project Beta",
-        subtitle: "One-line pitch for your second project",
-        description: `Describe what this project does and your role in it.`,
-        stack: ["Python", "Scikit-Learn", "Pandas"],
-        github: "https://github.com/YOURUSERNAME/project-beta",
+        title: "Movie Recomender System",
+        subtitle: "What movie to watch...",
+        description: `This was the final project for the Intro to Machine Learning course. Me and a collegue made a
+        movie recomender system that utilised KNN and embeddings to find the closest most related movie to what a user enjoys.`,
+        stack: ["Python", "Scikit-Learn", "Pandas", "Numpy"],
+        github: "https://github.com/SyntaxSculptor1/IML-FINAL-PROJECT",
         demo: "",
-        year: "2024",
+        year: "2025",
         competition: "",
         image: "assets/images/p2.jpg",
         youtube: "",
