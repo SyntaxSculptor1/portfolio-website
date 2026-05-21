@@ -19,4 +19,4 @@ Welcome to the repository for my personal portfolio website. This site serves as
 * **Deployment:** GitHub Pages.
 
 ---
-Disclaimer: Build with Claude, I am not a front end developer!
+Disclaimer: Built with Claude, I am not a front end developer!
